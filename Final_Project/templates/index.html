@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="active"><a href="#">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>New York Airbnb Price Checking Platform</h2>
+          <p>Made by Fernando Montes</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p>If you would like to find out whether your airbnb is over/under-priced, as well as
+            how it compares to other listings for various things such as reviews, bedrooms,
+            and overall satisfaction this website has it all for you! Please fill in your requirements
+            below, and we'll provide more details on your accomodations.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <form style="font-weight: 400 !important;" method="GET" action="/output2">
+            <div class="form-group">
+              <label for="namefield" style="font-weight: 400 !important;">Minimum Bedrooms</label>
+              <select name="bedrooms" class="form-control" id="bedroomSelect" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="satisfactionfield" style="font-weight: 400 !important;">Minimum Overall Satisfaction</label>
+              <select name="satisfaction" class="form-control" id="satisfactionfield" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="addressfield" style="font-weight: 400 !important;">Price Range</label>
+              <select name="price" class="form-control" id="priceSelect" required>
+                <option>50-150</option>
+                <option>150-250</option>
+                <option>250-350</option>
+                <option>350-450</option>
+                <option>450-550</option>
+             </select>
+            </div>
+
+            <div class="form-group">
+              <label for="agefield" style="font-weight: 400 !important;">Location</label>
+              <select name="location" class="form-control" id="locationfield" required>
+                <option>Manhattan</option>
+                <option>Queens</option>
+                <option>Brooklyn</option>
+                <option>Bronx</option>
+                <option>Staten Island</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="reviewfield" style="font-weight: 400 !important;">Minimum Reviews</label>
+              <select name="reviews" class="form-control" id="reviewsfield" required>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>10</option>
+                <option>20</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

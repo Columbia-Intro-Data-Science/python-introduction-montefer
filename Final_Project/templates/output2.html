@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='bootstrap.min.css') }}">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+          <h2>You inquired about the following listing details:</h2>
+          <br>
+
+          <h4>Price</h4>
+          <p>The price of the listing is ${{price}}</p>
+          <p>The price for your listing is 0.159 standard deviations above the mean. Your place might be too expensive for some people.</p>
+
+          <h4>Overall Satisfaction</h4>
+          <p>You're looking at {{satisfaction}} stars of satisfaction!</p>
+          <p>TThe overall satisfaction for your listing is -0.337 standard deviations below the mean given its stats</p>
+
+          <h4>Reviews</h4>
+          <p>This listing has at least {{reviews}}</p>
+          <p>The reviews for your listing are -0.973 standard deviations below the mean given its stats</p>
+
+
+          <h4>Location</h4>
+          <p>The listing is located in {{location}}</p>
+
+          <h4>Bedrooms</h4>
+          <p>Listing has {{bedrooms}} available bedrooms</p>
+          <p>The number of bedrooms your listing has is below average given its other stats</p>
+
+
+        </div>
+    </div>
+
+  </body>
+</html>
